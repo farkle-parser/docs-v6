@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>release-notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Theodore Tsirpanis">
+  <meta name="description" content="Farkle - release-notes">
+
+  <link rel="stylesheet" id="theme_link" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/materia/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"></script>
+
+  <link type="text/css" rel="stylesheet" href="https://v6.farkle.dev/content/navbar-fixed-left.css" />
+  <link type="text/css" rel="stylesheet" href="https://v6.farkle.dev/content/fsdocs-default.css" />
+  <link type="text/css" rel="stylesheet" href="https://v6.farkle.dev/content/fsdocs-custom.css" />
+  <script async type="text/javascript" src="https://v6.farkle.dev/content/fsdocs-tips.js"></script>
+  <!-- BEGIN SEARCH BOX: this adds support for the search box -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
+  <!-- END SEARCH BOX: this adds support for the search box -->
+</head>
+
+  <body>
+    <div class="alert alert-info" role="alert">
+      <h4 class="text-center">The next version of Farkle is in preview! Check out its <a href="https://farkle.dev">documentation</a>, and <a href="https://farkle.dev/migration/60-70.html">migrate your projects</a>.</h4>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-light bg-secondary fixed-left" id="fsdocs-nav">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <a href="https://v6.farkle.dev/index.html"><img id="fsdocs-logo" src="https://v6.farkle.dev/img/logo.png" /></a>
+        <!-- BEGIN SEARCH BOX: this adds support for the search box -->
+        <div id="header">
+          <div class="searchbox" id="fsdocs-searchbox">
+            <input data-search-input="" id="search-by" type="search" placeholder="Search..." />
+          </div>
+        </div>
+        <!-- END SEARCH BOX: this adds support for the search box -->
+
+        <ul class="navbar-nav">
+          <li class="nav-header">Links</li>
+          <li class="nav-item"><a class="nav-link" href="https://nuget.org/packages/Farkle">Get Library via NuGet</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/teo-tsirpanis/Farkle">Source Code on GitHub</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://v6.farkle.dev/license.html">License</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://v6.farkle.dev/release-notes.html">Release Notes</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://v6.farkle.dev/choosing-a-parser.html">Choosing a parser: Farkle vs alternatives</a></li>
+
+          <li class="nav-header">Getting started</li>
+          <li class="nav-item"><a class="nav-link" href="https://v6.farkle.dev/quickstart.html">Quick Start with F#</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://v6.farkle.dev/csharp.html">Using Farkle with C#</a></li>
+
+          <li class="nav-header">Documentation</li>
+          <li class="nav-item"><a class="nav-link" href="https://v6.farkle.dev/reference/index.html">API Reference</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://v6.farkle.dev/templates.html">Templating Reference</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://v6.farkle.dev/string-regexes.html">String regex reference</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://v6.farkle.dev/the-precompiler.html">The precompiler</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://v6.farkle.dev/advanced-features.html">Advanced Features</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="masthead">
+            <h3 class="muted"><a href="https://v6.farkle.dev/index.html">Farkle</a></h3>
+        </div>
+        <hr />
+        <div class="container" id="fsdocs-content">
+            <h4><a name="6-5-2-10-11-2024" class="anchor" href="#6-5-2-10-11-2024">6.5.2 - 10-11-2024</a></h4>
+<ul>
+<li>Fixed a bug where the LALR builder would generate wrong parsing tables under certain circumstances. (<a href="https://github.com/teo-tsirpanis/Farkle/issues/301)">https://github.com/teo-tsirpanis/Farkle/issues/301)</a></li>
+</ul>
+<h4><a name="6-5-1-25-01-2023" class="anchor" href="#6-5-1-25-01-2023">6.5.1 - 25-01-2023</a></h4>
+<ul>
+<li>Fixed a bug where the precompiler would not work on .NET Framework editions of MSBuild, like in Visual Studio for Windows, when targeting frameworks greater than .NET 6.</li>
+</ul>
+<h4><a name="6-5-0-09-09-2022" class="anchor" href="#6-5-0-09-09-2022">6.5.0 - 09-09-2022</a></h4>
+<ul>
+<li>Added an overload of the <code>MarkForPrecompile</code> extension method that enables the precompiler to be used in AOT environments. See <a href="https://teo-tsirpanis.github.io/Farkle/the-precompiler.html#Using-the-precompiler-in-AOT-environments">https://teo-tsirpanis.github.io/Farkle/the-precompiler.html#Using-the-precompiler-in-AOT-environments</a> for more details.</li>
+<li>Frequently used post-processors will no longer be optimized using dynamic code generation, because of concerns about the code generator's robustness. Performance might slightly regress. A more robust code generation system might be introduced in a future version of Farkle.</li>
+<li>More methods in the builder check their arguments for <code>null</code> and throw <code>ArgumentNullException</code>s.</li>
+<li>Some documentation was fixed.</li>
+<li>The nullability annotations for some generic methods in the builder were fixed.</li>
+<li>Added <code>params</code> in the array parameter overload of <code>Nonterminal.CreateUntyped</code> that takes a name and a series of production builders.</li>
+<li>The color of the goto cells in the HTML tables was changed to a brighter shade of blue whose contrast is compliant with WCAG 2 AA.</li>
+<li>C# users can now define single-member productions by directly calling <code>Finish(Constant)</code> without calling <code>Appended()</code> or <code>Extended()</code>. Previously only some combinations were supported (<code>Finish</code> on typed designtime Farkles and <code>FinishConstant</code> on literals), but now all can be used.</li>
+<li>The HTML DFA States tables were restyled to make them consistent with the LALR States tables. In particular the columns were swapped and the dark grey background of the character cells was removed.</li>
+<li>The <code>farkle new</code> command will place the output in the current directory instead of the input grammar's or assembly's directory, if not given an output path by the user.</li>
+<li>The <code>Production&lt;T&gt;</code> type became a covariant interface, fixing issue #26. Because it used to be a sealed class with no members, it is not expected to be a breaking change. User code is not allowed to implement it.</li>
+<li>Trimming warnings were reduced. A couple of them remain and might appear when building grammars without the precompiler, but they pose no risk, removing them was non-trivial.</li>
+</ul>
+<h4><a name="6-4-0-11-03-2022" class="anchor" href="#6-4-0-11-03-2022">6.4.0 - 11-03-2022</a></h4>
+<ul>
+<li><strong>Breaking change:</strong> <code>Farkle.Tools.MSBuild</code> require MSBuild 17, which comes with Visual Studio 2022 and the .NET 6 SDK.</li>
+<li>Farkle supports precompiling .NET 6 assemblies from Visual Studio.</li>
+<li>Fixed random compiler errors when using the F# production builder operators <code>.&gt;&gt;</code> and <code>.&gt;&gt;.</code>.</li>
+<li>The precompiler supports writing both a conflict report and detailed MSBuild errors via the <code>FarklePrecompilerErrorMode</code> property. Its allowed values are <code>ReportOnly</code> (default), <code>ErrorsOnly</code> and <code>Both</code>.</li>
+<li>String regexes support specifying predefined sets by their property name as well. For example, until now you could match all characters in the <code>Greek Extended</code> character set by specifying <code>\p{Greek Extended}</code>. From now on, <code>\p{GreekExtended}</code> will work too.</li>
+<li>Various bug fixes, particularly in the precompiler.</li>
+</ul>
+<h4><a name="6-3-2-31-10-2021" class="anchor" href="#6-3-2-31-10-2021">6.3.2 - 31-10-2021</a></h4>
+<ul>
+<li>Fixed a bug where the precompiler would not work on .NET Framework editions of MSBuild, like in Visual Studio for Windows.</li>
+</ul>
+<h4><a name="6-3-1-17-10-2021" class="anchor" href="#6-3-1-17-10-2021">6.3.1 - 17-10-2021</a></h4>
+<ul>
+<li><strong>Minor breaking change:</strong> <code>Farkle.Builder.RegexGrammar.designtime</code>'s type became a regular <code>DesigntimeFarkle&lt;Regex&gt;</code>, after being changed to a <code>Nonterminal&lt;Regex&gt;</code> in Farkle 6.3.0 by mistake. This change is unlikely to affect any regular user of Farkle.</li>
+<li>Fixed a bug where Farkle's assembly was not shrunk enough when trimmed.</li>
+</ul>
+<h4><a name="6-3-0-02-10-2021" class="anchor" href="#6-3-0-02-10-2021">6.3.0 - 02-10-2021</a></h4>
+<ul>
+<li><strong>Minor breaking change:</strong> Text with legacy CR line endings is no longer supported. Since this version, they will no longer be recognized as line endings by position tracking. When Farkle's next major version gets released, they will cause lexical errors.</li>
+<li><strong>Minor breaking change:</strong> The <code>Farkle.Builder.GrammarMetadata</code> type has an additional field of type <code>Farkle.Builder.OperatorPrecedence.OperatorScope</code>. User code that does not directly set metadata to designtime Farkles is not affected.</li>
+<li>The precompiler will now generate an HTML report if a grammar has LALR conflicts.</li>
+<li>The precompiler now works on Visual Studio for Windows. In this case only, it requires to install the .NET tool <code>Farkle.Tools</code>.</li>
+<li>When building a grammar, if Farkle cannot distinguish between two symbols, it will now include an example word that made it indecisive in the error message. A new build error type named <code>IndistinguishableSymbols2</code> was introduced.</li>
+<li>Any type of designtime Farkle can now be renamed or set metadata like case sensitivity, comments or operator scopes, without using the <code>DesigntimeFarkle.cast</code> function. There were some <strong>binary breaking changes</strong> but none is source breaking.</li>
+<li>Operator scopes will now correctly recognize multiple representations of the same designtime Farkle, such as an original terminal and a renamed one, or a string, and a designtime Farkle created with the <code>literal</code> operator that got passed the same string.</li>
+<li>Fixed a bug on the <code>new</code> CLI tool command where the <code>--prop</code> option could not be specified more than once.</li>
+<li>Fixed a bug where the <code>new</code> CLI tool command could not be used on projects or assemblies.</li>
+<li>Fixed a bug where titlecase letters were not excluded when building case-insensitive grammars.</li>
+<li>Fixed a bug where the <code>sepBy</code> operator could not match exactly one item.</li>
+</ul>
+<h4><a name="6-2-0-17-05-2021" class="anchor" href="#6-2-0-17-05-2021">6.2.0 - 17-05-2021</a></h4>
+<ul>
+<li><strong>Breaking change:</strong> The <code>Farkle.Builder.LALRBuildTypes</code> module, as well as most functions of the <code>Farkle.Builder.LALRBuild</code> module became internal.</li>
+<li><strong>Minor breaking change:</strong> Whitespace inside the "between", "at least" and "exactly <code>n</code> times" regex string quantifiers is no longer allowed. Using string regexes like <code>\d{ 4}</code> will cause an error.</li>
+<li><strong>Minor breaking change:</strong> The <code>Farkle.Builder.IRawDelegateProvider</code> interface and a function in the <code>Farkle.Builder.DFABuild</code> module became private. They were public by accident and served no purpose for Farkle's users.</li>
+<li>~~<strong>Minor breaking change:</strong> Users that write their own tokenizers must ensure that CRLF line endings are <code>Advance</code>d at once, otherwise the character stream's position will be incorrect. The vast majority of use cases (those that doesn't involve custom tokenizers) will not be affected by this change.~~ Reverted in Farkle 6.3.0.</li>
+<li><strong>Minor breaking change:</strong> Terminals, literals, and groups that are case-insensitively named <code>NewLine</code> will have an underscore prepended to their name when built, making them <code>_NewLine</code> for example. This change is a temporary workaround for a design deficiency of Farkle, where these terminals could end line groups and comments. It will be thoroughly fixed in the next major version. Because these names are only used for diagnostics and documentation generation, parser behavior will not be affected by this change. Nor will grammars read by EGT files be changed.</li>
+<li><strong>Minor breaking change:</strong> The <code>\s</code> and <code>\S</code> string regex symbol will now match exactly either horizontal tabs, line feeds, carriage returns or spaces. Other characters like vertical tabs and non-breaking spaces are no longer matched. This change matches Farkle's definition of whitespace. To revert to the previous behavior use <code>\p{Whitespace}</code> or <code>\P{Whitespace}</code>.</li>
+<li>Farkle's string regexes got many improvements and bug fixes, bringing their syntax closer -but not a 100% match- to popular regex languages. Take a look at <a href="string-regexes.html">the string regex reference</a> for more details.</li>
+<li>The precompiler now works when used on a project targeting a framework earlier than .NET Core 3.1.</li>
+<li>The <code>Position.Advance</code> method got a new overload that accepts a <code>ReadOnlySpan</code> of characters. It is recommended over the existing one that accepts a single character because it reliably handles line endings.</li>
+<li>Building a grammar can now be cancelled by new functions introduced in <code>Farkle.Builder</code>'s <code>DFABuild</code>, <code>LALRBuild</code> and <code>DesigntimeFarkleBuild</code> modules. Additionally the <code>Build</code> and <code>BuildUntyped</code> extension methods of designtime Farkles now accept an optional cancellation token.</li>
+<li>Fixed a bug where the wrong error position was sometimes reported on text with LF line endings.</li>
+<li>Fixed a bug where the wrong error position was reported on syntax errors.</li>
+</ul>
+<h4><a name="6-1-0-05-03-2021" class="anchor" href="#6-1-0-05-03-2021">6.1.0 - 05-03-2021</a></h4>
+<ul>
+<li>Some typos were fixed in Farkle's HTML templates.</li>
+<li>The <code>ParserApplicationExceptionWithPosition</code> type was deprecated in favor of a new constructor in <code>ParserApplicationException</code>.</li>
+<li>The EGT file reader will throw an exception if it tries to load a grammar file that shifts on EOF in one of its LALR states (which would cause infinite loops).</li>
+<li>The designtime Farkles that are returned by the <code>many</code> and <code>many1</code> operators now have the correct name.</li>
+<li>Throwing a <code>ParserException</code> during post-processing will not be thrown in user code inside a <code>PostProcessorException</code>, but will be caught by the runtime Farkle API, allowing to customize the parser error message in greater detail.</li>
+</ul>
+<h4><a name="6-0-0-23-02-2021" class="anchor" href="#6-0-0-23-02-2021">6.0.0 - 23-02-2021</a></h4>
+<ul>
+<li><strong>Breaking change:</strong> The functions <code>RuntimeFarkle.ofEGTFile</code> and <code>RuntimeFarkle.ofBase64String</code>as well as their corresponding <code>RuntimeFarkle</code> static methods  were removed. Users are advised to migrate away from GOLD Parser.</li>
+<li><strong>Breaking change:</strong> The <code>RuntimeFarkle.GetBuildError</code> method was replaced by <code>GetBuildErrors</code>, which returns a list of build errors.</li>
+<li><strong>Breaking change:</strong> The <code>Farkle.Grammar.Grammar.Properties</code> member now holds a strongly-typed record of informative grammar properties. Unrecognized GOLD Parser properties such as "Author", "Description" and "Version" are discarded. Existing grammar files remain compatible.</li>
+<li><strong>Breaking change:</strong> The members of Farkle's discriminated unions can no longer be accessed in F# using a method. For example, <code>let foo (x: Terminal) = printfn "%s" x.Name</code> becomes <code>let foo (Terminal(_, name)) = printfn "%s" name</code>. For C# users, duplicate properties like <code>Terminal.name</code> with a lowercase "n" were removed; they are replaced by their corresponding title-cased properties.</li>
+<li><strong>Breaking change:</strong> The members of many of Farkle's discriminated unions got meaningful names. C# code using the older names might break.</li>
+<li><strong>Breaking change:</strong> Removed support for generating legacy grammar skeleton files from MSBuild using the <code>Farkle</code> item.</li>
+<li><strong>Breaking change:</strong> The <code>Farkle.Common.SetOnce</code> type became internal.</li>
+<li>Farkle's types and methods support <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8#nullable-reference-types">C# 8.0's Nullable Reference Types</a>.</li>
+<li>Farkle's builder supports defining operator precedence and associativity to resolve conflicts. The quick start guide was updated.</li>
+<li>Farkle supports virtual terminals -terminals that are not backed by the default tokenizer's DFA but created by custom tokenizers-, allowing for scenarios like indent-based grammars. <a href="https://github.com/teo-tsirpanis/Farkle/blob/master/sample/Farkle.Samples.FSharp/IndentBased.fs">An F# sample of an indent-based grammar</a> was published.</li>
+<li>Dynamic code generation will be applied to post-processors that are frequently used, in a fashion similar to .NET's tiered compilation, regardless of whether their designtime Farkle is precompilable.</li>
+<li>Build error reporting is improved. More build errors will be reported at the same time, without having to fix one to show the next.</li>
+<li>Stack overflows when building extremely complex designtime Farkles were either mitigated or will throw recoverable exceptions.</li>
+</ul>
+<h4><a name="6-0-0-alpha-3-25-11-2020" class="anchor" href="#6-0-0-alpha-3-25-11-2020">6.0.0-alpha.3 - 25-11-2020</a></h4>
+<ul>
+<li><strong>Breaking change:</strong> .NET Framework 4.5 is no longer supported. The library targets .NET Standard 2.0, .NET Standard 2.1 and .NET 5.</li>
+<li><strong>Breaking change:</strong> Logging parser events is no longer supported. The logging function was removed from the signatures of parser APIs.</li>
+<li><strong>Breaking change:</strong> The function <code>LALRParser.parseLALR</code> was renamed to <code>LALRParser.parse</code>.</li>
+<li><strong>Breaking change:</strong> The <code>Farkle.Parser.OptimizedOperations</code> type was made internal.</li>
+<li><strong>Breaking change:</strong> Transformers no longer take the position of a terminal, but an <code>ITransformerContext</code> type containing more information.</li>
+<li><strong>Breaking change:</strong> Farkle's exception types were refactored. They inherit from <code>FarkleException</code>.</li>
+<li><strong>Breaking change:</strong> Post-processor exceptions are wrapped inside a <code>PostProcessorException</code> and thrown to user code.</li>
+<li><strong>Breaking change:</strong> Only objects of type <code>PrecompilableDesigntimeFarkle</code> can be marked for precompilation.</li>
+<li><strong>Minor breaking change:</strong> The <code>Transformers</code> and <code>Fusers</code> properties were removed from the <code>Farkle.Builder.GrammarDefinition</code> type.</li>
+<li>Farkle will now optimize precompilable designtime Farkles using dynamic code generation. This feature is only supported on .NET Standard 2.1 if the runtime supports dynamic code compilation.</li>
+<li>An API for the <code>CharStream</code> type was published.</li>
+<li><a href="https://teo-tsirpanis.github.io/Farkle/reference/farkle-builder-precompiledgrammar.html">An API for getting precompiled grammars</a> was published.</li>
+<li>The tokenizer can be extended by user code.</li>
+<li>The runtime Farkle's extension methods became regular methods.</li>
+<li>~~Exceptions that might occur when a precompiled grammar fails to be loaded can be suppressed with an <code>AppContext</code> switch.~~ <strong>Removed in Farkle 6.0.0</strong></li>
+</ul>
+<h4><a name="6-0-0-alpha-2-23-08-2020" class="anchor" href="#6-0-0-alpha-2-23-08-2020">6.0.0-alpha.2 - 23-08-2020</a></h4>
+<ul>
+<li>Farkle supports creating regexes from strings. See more in <a href="https://teo-tsirpanis.github.io/Farkle/string-regexes.html.">https://teo-tsirpanis.github.io/Farkle/string-regexes.html.</a></li>
+<li>The parser, the builder and the EGT(neo) reader became faster once again.</li>
+<li>The precompiler does not crash when used from .NET Standard libraries.</li>
+<li><strong>Breaking change:</strong> The <code>CharStream</code> API became internal. A new one will be published in the next release.</li>
+</ul>
+<h4><a name="6-0-0-alpha-1-13-04-2020" class="anchor" href="#6-0-0-alpha-1-13-04-2020">6.0.0-alpha.1 - 13-04-2020</a></h4>
+<ul>
+<li><strong>Breaking change:</strong> Removed the legacy API for creating runtime Farkles from EGT files (the API with the transformers and fusers). EGT files are still supported (for now), but users are strongly urged to rewrite their grammars using <code>Farkle.Builder</code>, or implement the <code>PostProcessor</code> interface themselves (not recommended).</li>
+<li><strong>Breaking change:</strong> The <code>PostProcessor</code> type was moved to the root <code>Farkle</code> namespace. Some reusable post-processors were moved to the new <code>Farkle.PostProcessors</code> module.</li>
+<li>Farkle can now build grammars at compile-time. See more in <a href="https://teo-tsirpanis.github.io/Farkle/the-precompiler.html.">https://teo-tsirpanis.github.io/Farkle/the-precompiler.html.</a></li>
+<li>Added a function to rename designtime Farkles; it might be useful for better diagnostic messages.</li>
+</ul>
+<h4><a name="5-4-1-23-03-2020" class="anchor" href="#5-4-1-23-03-2020">5.4.1 - 23-03-2020</a></h4>
+<ul>
+<li>Refactor some designtime Farkle functions (like <code>many1</code>) to use less nonterminals.</li>
+<li>Add functions and regexes to create terminals for unsigned real numbers.</li>
+</ul>
+<h4><a name="5-4-0-20-03-2020" class="anchor" href="#5-4-0-20-03-2020">5.4.0 - 20-03-2020</a></h4>
+<ul>
+<li>You can now add lexical groups in a grammar. They resemble <a href="http://www.goldparser.org/doc/grammars/define-groups.htm">GOLD Parser's feature</a>, but always advance by character and do not not support nesting.</li>
+<li>Add a couple of methods in runtime Farkles to easily check whether building it had succeeded.</li>
+<li>Lexical errors are reported at the point they occur; not at the point of the first character read by the tokenizer.</li>
+<li>Made the untyped builder API easier to access. See the deprecation notice for the new functions to use.</li>
+<li><strong>Minor breaking change:</strong> The <code>CharStream.readChar</code> value gets the character index by value, not by reference. Callers have to increment it accordingly to get further characters.</li>
+<li><strong>Minor breaking change:</strong> The type <code>Farkle.Grammar.OptimizedOperations</code> was moved to the <code>Farkle.Parser</code> namespace; it was there for historical reasons.</li>
+<li>As you might have seen, breaking changes on public members that do not affect the average Farkle user will not warrant a major version increase.</li>
+</ul>
+<h4><a name="5-3-0-23-02-2020" class="anchor" href="#5-3-0-23-02-2020">5.3.0 - 23-02-2020</a></h4>
+<ul>
+<li>Farkle's speed <strong>more than doubled</strong> by disabling tailcall optimizations.</li>
+<li><strong>Minor breaking change:</strong> The API of the <code>CharStream</code> type slightly changed. Most notably, the type <code>CharStreamIndex</code> was removed in favor of <code>uint64</code>, and the order of the last two arguments in the function <code>CharStream.read</code> has changed.</li>
+</ul>
+<h4><a name="5-2-0-09-02-2020" class="anchor" href="#5-2-0-09-02-2020">5.2.0 - 09-02-2020</a></h4>
+<ul>
+<li>The types <code>DesigntimeFarkle&lt;TResult&gt;</code> and <code>PostProcessor&lt;TResult&gt;</code> are covariant. The change was made possible by <a href="https://github.com/teo-tsirpanis/Covarsky">Covarsky</a>, a tool written for this purpose.</li>
+<li>Added a function called <code>Regex.allButChars</code> (<code>Regex.NotOneOf</code> for C#) that creates regexes accepting all characters except certain ones.</li>
+<li>User code exceptions during post-processing are not captured anymore.</li>
+<li>Farkle.Tools.MSBuild works with all .NET Core SDK versions after 2.0.</li>
+</ul>
+<h4><a name="5-1-0-31-01-2020" class="anchor" href="#5-1-0-31-01-2020">5.1.0 - 31-01-2020</a></h4>
+<ul>
+<li>It happened. Farkle can create grammars without the need of GOLD Parser. <strong>Farkle is now a parsing library on its own.</strong></li>
+<li>Move the <code>CharStream</code> type in the <code>Farkle.IO</code> namespace.</li>
+<li>Add methods to parse text from .NET <code>TextReader</code>s. They should be preferred over parsing .NET <code>Stream</code>s because the latter are supposed to contain binary data, not text.</li>
+<li>The <code>Farkle.CSharp</code> namespace is no longer required. C# users just have to use <code>Farkle</code> to get their extension methods, unless they are writing their own post-processors for GOLD Parser grammars, where they have to use <code>Farkle.PostProcessor.CSharp</code>.</li>
+<li><strong>Breaking change:</strong> Farkle.Tools.MSBuild was upgraded to .NET Core 3.1. Nothing significant changed though, which means those who still use .NET Core 2.1 can stay in a previous version.</li>
+<li><strong>Breaking change:</strong> Reading grammars from EGT files now raises an exception.</li>
+<li><strong>Breaking change:</strong> Some utility functions that had nothing to do with parsing were either removed or made internal.</li>
+<li><strong>Breaking change:</strong> Internal errors of the parser (in the unfortunate case they happen) throw an exception. In the next release, exceptions in a transformer or fuser will not be caught either.</li>
+</ul>
+<h4><a name="5-0-1-21-08-2019" class="anchor" href="#5-0-1-21-08-2019">5.0.1 - 21-08-2019</a></h4>
+<ul>
+<li>Fix a bug where comments in input text would sometimes crash the parser.</li>
+<li>Allow line comments in the last line of the input text.</li>
+</ul>
+<h4><a name="5-0-0-13-08-2019" class="anchor" href="#5-0-0-13-08-2019">5.0.0 - 13-08-2019</a></h4>
+<ul>
+<li>Fix a bug where the tokenizer would erroneously report an EOF instead of a lexical error. - <a href="https://github.com/teo-tsirpanis/Farkle/issues/8">#8</a></li>
+<li>Add <code>CharStream.TryLoadFirstCharacter</code>. With this method, you can check whether the input of a character stream has ended, and safely access <code>CharStream.FirstCharacter</code>.</li>
+<li>Bring back <code>Grammar.StartSymbol</code>, but implement it correctly this time.</li>
+<li>Write more tests and documentation.</li>
+</ul>
+<h4><a name="5-0-0-rc-7-10-08-2019" class="anchor" href="#5-0-0-rc-7-10-08-2019">5.0.0-rc.7 - 10-08-2019</a></h4>
+<ul>
+<li>Speed-up the tokenizer by using an array that handles ASCII characters.</li>
+<li>Remove <code>Grammar.StartSymbol</code>, as it was unreliable, and useless to Farkle.</li>
+<li>Remove the <code>OutputDirectorySuffix</code> metadata introduced in 5.0.0-rc.5. Generated source files by Farkle.Tools.MSBuild are <em>always</em> added in the same directory as the project.</li>
+</ul>
+<h4><a name="5-0-0-rc-6-22-07-2019" class="anchor" href="#5-0-0-rc-6-22-07-2019">5.0.0-rc.6 - 22-07-2019</a></h4>
+<ul>
+<li>Fix a breaking error in Farkle.Tools.MSBuild.</li>
+<li>Reduce allocations in the parser.</li>
+</ul>
+<h4><a name="5-0-0-rc-5-22-07-2019" class="anchor" href="#5-0-0-rc-5-22-07-2019">5.0.0-rc.5 - 22-07-2019</a></h4>
+<ul>
+<li>Fixed a bug which sometimes made Farkle.Tools.MSBuild unusable for C# users.</li>
+<li>Added a new MSBuild item metadata called <code>OutputDirectorySuffix</code> which is useful for generating templates in a different directory than the EGT file.</li>
+<li>Add a new benchmark which compares a Farkle-made JSON parser to <a href="https://xyncro.tech/chiron/">Chiron</a>, which is powered by <a href="https://www.quanttec.com/fparsec/">FParsec</a>. You can see the results of the benchmarks <a href="https://github.com/teo-tsirpanis/Farkle/tree/master/performance">over here</a>.</li>
+</ul>
+<h4><a name="5-0-0-rc-4-18-07-2019" class="anchor" href="#5-0-0-rc-4-18-07-2019">5.0.0-rc.4 - 18-07-2019</a></h4>
+<ul>
+<li>Fixed a bug which made Farkle.Tools.MSBuild unusable.</li>
+</ul>
+<h4><a name="5-0-0-rc-3-17-07-2019" class="anchor" href="#5-0-0-rc-3-17-07-2019">5.0.0-rc.3 - 17-07-2019</a></h4>
+<ul>
+<li>The CLI tool got a new property <code>--namespace</code> (shortened to <code>-ns</code>) which is simpler to use and replaces <code>--property</code>.</li>
+<li>Fixed errors in the generated F# code.</li>
+</ul>
+<h4><a name="5-0-0-rc-2-17-07-2019" class="anchor" href="#5-0-0-rc-2-17-07-2019">5.0.0-rc.2 - 17-07-2019</a></h4>
+<ul>
+<li>The CLI tool generates post-processor skeletons by default.</li>
+<li>The CLI tool can automatically find the EGT file to process (if there is only one in the current directory), and the language (if there are C# or F# projects in the current directory).</li>
+<li>Fixed a bug where generated source files would sometimes have duplicate production names in their enumerated type. - <a href="https://github.com/teo-tsirpanis/Farkle/issues/7">#7</a></li>
+</ul>
+<h4><a name="5-0-0-rc-1-15-07-2019" class="anchor" href="#5-0-0-rc-1-15-07-2019">5.0.0-rc.1 - 15-07-2019</a></h4>
+<ul>
+<li>Farkle now has better C# support. Just write <code>using Farkle.CSharp;</code>, and you are good to go!</li>
+<li>Farkle now has a CLI tool helper. It can generate a grammar definition file that contains the terminal and production types for your grammar, as well as the EGT file in base-64 encoding. It can also create a skeleton source file to help you write a post-processor. What is more, it supports <em>both</em> C# and F#!</li>
+<li>Farkle now has MSBuild integration. You can auto-generate a source file describing your grammar, and not have to carry EGT files around.</li>
+<li>As always, performance was improved, especially in the EGT file reader.</li>
+<li><strong>Breaking change:</strong> In your post-processor, if you have functions like <code>take2Of production (index1, index2) count func</code>, remove the <code>count</code> parameter.</li>
+<li><strong>Breaking change:</strong> The <code>Token</code> type was moved to <code>Farkle.Parser</code> and is not needed by the <code>AST</code> type.</li>
+</ul>
+<h4><a name="4-0-2-21-08-2019" class="anchor" href="#4-0-2-21-08-2019">4.0.2 - 21-08-2019</a></h4>
+<ul>
+<li>Fix a bug where comments in input text would sometimes crash the parser.</li>
+</ul>
+<h4><a name="4-0-1-11-08-2019" class="anchor" href="#4-0-1-11-08-2019">4.0.1 - 11-08-2019</a></h4>
+<ul>
+<li>Backport the fix of GitHub issue <a href="https://github.com/teo-tsirpanis/Farkle/issues/8">#8</a>.</li>
+</ul>
+<h4><a name="4-0-0-17-01-2019" class="anchor" href="#4-0-0-17-01-2019">4.0.0 - 17-01-2019</a></h4>
+<ul>
+<li>Optimized the way Farkle handles the input stream characters by reducing copies &amp; improving performance.</li>
+<li>Removed all 3rd-party non-Microsoft dependencies.</li>
+</ul>
+<h4><a name="3-1-0-alpha003-10-10-2018" class="anchor" href="#3-1-0-alpha003-10-10-2018">3.1.0-alpha003 - 10-10-2018</a></h4>
+<ul>
+<li>The <code>GOLDParser</code> API was replaced in favor of the <code>RuntimeFarkle</code> type. This means that the parsing and post-processing operations are unified.</li>
+<li>The code became cleaner and faster yet again, with a notable optimization in the tokenizer.</li>
+</ul>
+<h4><a name="3-1-0-alpha002-14-09-2018" class="anchor" href="#3-1-0-alpha002-14-09-2018">3.1.0-alpha002 - 14-09-2018</a></h4>
+<ul>
+<li>The EGT file reader was replaced with a newer one which is significantly more performant.</li>
+<li>The <code>GOLDParser</code> class was removed in favor of the new module with the same name.</li>
+</ul>
+<h4><a name="3-1-0-alpha001-06-09-2018" class="anchor" href="#3-1-0-alpha001-06-09-2018">3.1.0-alpha001 - 06-09-2018</a></h4>
+<ul>
+<li>The functions for the <code>RuntimeFarkle</code> type are in their own module.</li>
+<li>The reader for GOLD Parser EGT files is now based on a BinaryReader, and is faster and more lightweight.</li>
+<li>The parser directly generates Abstract Syntax trees, eliminating the need to convert them from reductions, a very hard-to-use type.</li>
+<li>The parser does not keep the parsing log messages. Instead, a callback that is provided by the user is called from which the message can be arbitrarily processed.</li>
+<li>The code was yet again simplified and reorganized into different namespaces.</li>
+<li>The library became much faster after performance profiling.</li>
+</ul>
+<h4><a name="3-0-0-15-07-2018" class="anchor" href="#3-0-0-15-07-2018">3.0.0 - 15-07-2018</a></h4>
+<ul>
+<li>Introduced the <code>RuntimeFarkle</code> API. This allows the user to both parse a string and convert its Abstract Syntax Tree into any type easily.</li>
+<li>The parser can lazily read an input file.</li>
+<li>The project does no more depend on Chessie, using the core library's Result type.</li>
+<li>The internal architecture was greatly refactored.</li>
+</ul>
+<h4><a name="3-0-0-alpha001-06-09-2017" class="anchor" href="#3-0-0-alpha001-06-09-2017">3.0.0-alpha001 - 06.09.2017</a></h4>
+<ul>
+<li>A new type named ParseResult will make parsing easier for both F# and C# users.</li>
+<li>Changed the way the index of grammar objects is stored.</li>
+</ul>
+<h4><a name="2-0-0-03-09-2017" class="anchor" href="#2-0-0-03-09-2017">2.0.0 - 03.09.2017</a></h4>
+<ul>
+<li>Overhauled the low-level parser API. It is a simple 5-line type called <code>Parser</code>. Its new design prevents misusing the API (like continuing parsing on a completed parser state), and decouples it from any implementation.</li>
+<li>Also, the GOLDParser class is changed too. It is no more a static class, and its design encourages creating a grammar only once.</li>
+<li>Polished the API; changed the names of some types (like <code>Production.Nonterminal</code> to <code>Head</code>), added prettier C# names and made some types internal.</li>
+<li>And last yet not least... <em>Everything</em> is documented.</li>
+</ul>
+<h4><a name="2-0-0-beta001-18-08-2017" class="anchor" href="#2-0-0-beta001-18-08-2017">2.0.0-beta001 - 18.08.2017</a></h4>
+<ul>
+<li>The project is now one NuGet package named Farkle.</li>
+<li>The library became faster after performance profiling.</li>
+</ul>
+<h4><a name="1-0-0-08-08-2017" class="anchor" href="#1-0-0-08-08-2017">1.0.0 - 08.08.2017</a></h4>
+<ul>
+<li>Initial release.</li>
+</ul>
+<h4><a name="0-0-1-alpha" class="anchor" href="#0-0-1-alpha">0.0.1-alpha</a></h4>
+<ul>
+<li>Started the project.</li>
+</ul>
+
+            
+        </div>
+    </div>
+
+    <!-- BEGIN SEARCH BOX: this adds support for the search box -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.5/auto-complete.css" />
+    <script type="text/javascript">var fsdocs_search_baseurl = 'https://v6.farkle.dev/';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.5/auto-complete.min.js"></script>
+    <script async type="text/javascript" src="https://v6.farkle.dev/content/fsdocs-search.js"></script>
+    <!-- END SEARCH BOX: this adds support for the search box -->
+  </body>
+
+</html>
